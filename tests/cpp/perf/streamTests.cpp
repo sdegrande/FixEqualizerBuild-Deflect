@@ -114,7 +114,7 @@ class DCThread : public QThread
                   << " megapixel/s (" << NIMAGES / time << " FPS)" << std::endl;
 
         for (size_t i = 0; i < NBYTES; ++i)
-            pixels[i] = uint8_t(qrand());
+            pixels[i] = uint8_t(rand());
         futures.clear();
         futures.reserve(NIMAGES * 2);
         timer.restart();
